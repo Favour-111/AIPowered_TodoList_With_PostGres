@@ -1,0 +1,147 @@
+/* Modern Auth UI Styles for Login & Signup */
+@import "tailwindcss";
+.auth-bg {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+  background-attachment: fixed;
+  transition: background 0.3s;
+}
+.dark .auth-bg {
+  background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+}
+
+.auth-card {
+  box-shadow: 0 8px 32px 0 rgba(31, 41, 55, 0.12);
+  border-radius: 16px;
+  border: 1px solid rgba(120, 120, 120, 0.08);
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.input-base {
+  @apply w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-zinc-700 bg-white/70 dark:bg-zinc-800/70 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 transition-all duration-150;
+  font-size: 1rem;
+}
+
+.floating-label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  pointer-events: none;
+  color: #6b7280;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+.peer:focus ~ .floating-label,
+.peer:not(:placeholder-shown) ~ .floating-label {
+  top: -0.7rem;
+  left: 0.8rem;
+  font-size: 0.85rem;
+  color: #6366f1;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0 0.3em;
+  border-radius: 8px;
+}
+
+.show-hide-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #6366f1;
+  transition: color 0.2s;
+}
+.show-hide-btn:focus {
+  outline: 2px solid #6366f1;
+}
+
+.primary-btn {
+  @apply bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded-xl shadow transition-all duration-150 disabled:bg-indigo-300 disabled:cursor-not-allowed;
+}
+
+.social-btn {
+  @apply flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 shadow hover:shadow-md transition-all duration-150;
+}
+
+.divider {
+  @apply flex items-center text-gray-400 text-xs;
+}
+.divider:before,
+.divider:after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 0 8px;
+}
+
+.accent-link {
+  @apply text-indigo-500 hover:underline font-medium transition-all duration-150;
+}
+
+.forgot-link {
+  @apply text-xs text-indigo-400 hover:underline transition-all duration-150;
+}
+
+.error-msg {
+  @apply text-xs text-red-500 mt-1 block;
+}
+.success-msg {
+  @apply text-xs text-green-500 mt-1 block;
+}
+
+.strength-bar {
+  height: 6px;
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.bar {
+  height: 100%;
+  transition: width 0.3s, background 0.3s;
+}
+.bar-0 {
+  width: 0%;
+  background: #e5e7eb;
+}
+.bar-1 {
+  width: 33%;
+  background: #f59e42;
+}
+.bar-2 {
+  width: 66%;
+  background: #fbbf24;
+}
+.bar-3 {
+  width: 100%;
+  background: #34d399;
+}
+.bar-4 {
+  width: 100%;
+  background: #22c55e;
+}
+
+.shake {
+  animation: shake 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  80% {
+    transform: translateX(4px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-8px);
+  }
+  40%,
+  60% {
+    transform: translateX(8px);
+  }
+}
