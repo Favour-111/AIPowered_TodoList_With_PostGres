@@ -3,6 +3,7 @@ import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FiCheckCircle, FiMail, FiLock, FiUser } from "react-icons/fi";
 import "../auth.css";
+import { Link } from "react-router-dom";
 
 const passwordStrength = (pwd) => {
   if (!pwd) return 0;
@@ -285,12 +286,12 @@ const Signup = () => {
             <div className="mt-6 text-center">
               <p className="text-sm text-zinc-600 dark:text-zinc-400">
                 Already have an account?{" "}
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
                 >
                   Sign in
-                </a>
+                </Link>
               </p>
             </div>
           </div>
