@@ -146,7 +146,7 @@ export default function AIWidget() {
                 value={chatInput}
                 onChange={(e) => setChatInput(e.target.value)}
                 placeholder="Ask Taskora to plan, summarize, or prioritize..."
-                className="w-full rounded-2xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 focus:outline-none focus:ring-4 focus:ring-indigo-500/15 focus:border-indigo-500 transition-all"
+                className="w-full rounded-2xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 focus-visible:outline-none focus:ring-4 focus:ring-indigo-500/15 focus:border-indigo-500 ring-offset-0 transition-all box-border"
                 disabled={chatLoading}
               />
               <div className="absolute inset-y-0 right-3 flex items-center gap-1 text-[11px] text-zinc-400 uppercase tracking-[0.18em]">
